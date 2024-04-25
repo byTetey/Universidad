@@ -1,0 +1,15 @@
+
+Las grabaciones en gallego de este directorio están incluidas en un amplio corpus de voz recogido por el Grupo de Tecnologías Multimedia (GTM) de la Universidad de Vigo 
+en colaboración con el "Centro Ramón Piñeiro  para a Investigación en Humanidades". Todo el material se encuentra a disposición pública en https://zenodo.org/record/8027725 
+bajo licencia  Creative Commons Attribution 4.0 International (https://creativecommons.org/licenses/by/4.0/legalcode) donde, entre otros aspectos, se describe 
+la exención de garantías y limitación de responsabilidad.
+
+Los nombres de los ficheros de este directorio no se corresponden necesariamente con los del corpus compartido y en algún caso se ha reducido la frecuencia de muestreo 
+original y/o se han realizado transformaciones de la señal original.
+
+Citar el corpus como:
+
+Centro Ramón Piñeiro para a Investigación en Humanidades (CRPIH), & Multimedia Technology Group (GTM) – 
+atlanTTic Research Center for Telecommunication Technologies. (2023). 
+CRPIH_UVigo-GL-Voices: Galician TTS dataset (1.0.0.) [Data set]. 
+Zenodo. https://doi.org/10.5281/zenodo.8027725

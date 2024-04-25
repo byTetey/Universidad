@@ -1,0 +1,12 @@
+
+Las señales originales de voz y laringógrafo de este directorio proceden de:
+
+	PTDB-TUG: Pitch Tracking Database from Graz University of Technology
+	https://www.spsc.tugraz.at/databases-and-tools/ptdb-tug-pitch-tracking-database-from-graz-university-of-technology.html
+	License: http://opendatacommons.org/licenses/odbl/1.0/
+
+Para esta práctica, las señales originales de laringógrafo han sido procesadas con Audacity para eliminar componentes indeseadas.
+
+Las anotaciones automáticas en inglés han sido obtenidas a través del servicio web:
+
+	https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSBasic

@@ -1,0 +1,26 @@
+CODIGO DEMOSTRACION TNS
+
+for i=0:number_of_frames-1
+        
+        ini=i*N/2+1;
+        s_mdct=mdct(s(ini:ini+N-1))'; %La longitud de s_mdct es M=N/2
+        
+        ak = lpc(s_mdct,10);
+        ek = filter(ak,1,s_mdct);
+
+        qek = quantize(ek,5,'scale');       % produce un preeco, antes de que haya un transitorio hay distorsion
+        qs_mdct = filter(1,ak,qek);
+        % hace falta aumentar el numero de bits asignado para codificar esa parte 
+        %  devuelve los valores de z cuantificados con 5 bits 
+        % y ajustando el valor de sobrecarga del cuantificador 
+        % al máximo en valor absoluto de la señal.
+
+        x=imdct(qs_mdct)'; %La longitud de x es N=2M.   
+        
+        temp=xp((N/2)+1:end) + x(1:N/2) ; %Suma solapada            % ESTO ES EJERCICIO DE EXAMEN
+        
+        y=[y temp];
+        
+        xp=x; %Actualización de la IMDCT del bloque previo.
+        
+end
