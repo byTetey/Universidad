@@ -1,0 +1,24 @@
+% Demod de la señal generada de simulink
+
+fmt = transpose(fm);    % transponemos la marriz, ahora la inf va a estar en la s
+FM=fmt(:);
+
+
+%tomamos la fs de los parametros de bloque RTL-SDR Receiver
+%fs=fmsRzParams
+fs=228000;
+figure(1),powerspec(FM,1/fs);
+%%
+FM1=[0; FM(1:end-1)] % ; pq es un vector columna
+w=FM.*conj(FM1);
+v=angle(w);
+
+figure(2),powerspec(v,1/fs);
+
+
+
+
+
+
+
+
