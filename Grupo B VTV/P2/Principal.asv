@@ -1,0 +1,15 @@
+longitud = 200;
+Ts = 1;
+rate = 10;
+T0 = Ts/rate;
+Tmin = 0;
+Tmax = ((longitud/2)-1)*Ts;
+bitstream = CreaSecuencia(longitud); % Se crea la secuencia de bits
+SymbolStream = CodificaSecuencia(bitstream); % Codificamos los bits
+[s,t] = PasarAnalogico(SymbolStream,Ts,rate); % Sin ruido
+DibujarConstelacion(s,t,Ts,T0,Tmin,Tmax);
+DiagramaOjo(s,t,Ts,rate,Tmin,Tmax,0); 
+desviacion_ruido = 0.01;
+[sr,tr] = SumarRuido(s,t,desviacion_ruido); % Se añade ruido a la señal
+DibujarConstelacion(sr,tr,Ts,T0,Tmin,Tmax);
+DiagramaOjo(sr,tr,Ts,rate,Tmin,Tmax,1);
